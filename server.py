@@ -48,7 +48,7 @@ class SpannerDDL(FastMCP):
         Returns:
             The result of the DDL statement execution.
         \"\"\"
-        destructive_keywords = ["DROP", "TRUNCATE", "DELETE"]
+        destructive_keywords = ["DROP", "TRUNCATE"]
         is_destructive = any(keyword in ddl_statement.upper() for keyword in destructive_keywords)
         if "ALTER TABLE" in ddl_statement.upper() and "DROP COLUMN" in ddl_statement.upper():
             is_destructive = True
