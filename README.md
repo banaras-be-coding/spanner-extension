@@ -25,6 +25,7 @@ Learn more about [Gemini CLI Extensions](https://github.com/google-gemini/gemini
 Before you begin, ensure you have the following:
 
 * [Gemini CLI](https://github.com/google-gemini/gemini-cli) installed with version **+v0.6.0**.
+* [Google Cloud SDK](https://cloud.google.com/sdk/docs/install) installed and authenticated.
 * Setup Gemini CLI [Authentication](https://github.com/google-gemini/gemini-cli/tree/main?tab=readme-ov-file#-authentication-options).
 * A Google Cloud project with the **Spanner API** enabled.
 * Ensure [Application Default Credentials](https://cloud.google.com/docs/authentication/gcloud) are available in your environment.
@@ -40,6 +41,12 @@ To install the extension, use the command:
 
 ```bash
 gemini extensions install https://github.com/gemini-cli-extensions/spanner
+```
+
+After installing the extension, you will need to install the Python dependencies:
+
+```bash
+pip install -r requirements.txt
 ```
 
 ### Configuration
@@ -77,6 +84,8 @@ gemini
 
 * **Generate Code:**
     * "Generate a Python dataclass to represent the 'customers' tab
+* **Execute DDL:**
+    * "add a column named 'email' to the 'users' table"
 
 ## Supported Tools
 

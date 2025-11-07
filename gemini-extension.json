@@ -10,6 +10,14 @@
         "spanner",
         "--stdio"
       ]
+    },
+    "spanner-ddl": {
+      "command": "fastmcp",
+      "args": [
+        "run",
+        "${extensionPath}${/}server.py",
+        "--stdio"
+      ]
     }
   },
   "contextFileName": "SPANNER.md"
